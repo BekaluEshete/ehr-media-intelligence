@@ -1,0 +1,29 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.ruff_cache/
+
+# Environment — never commit real keys
+.env
+
+# Runtime data — generated on first run
+backend/data/ehr.db
+backend/data/faiss_index/
+backend/data/cache/*
+!backend/data/cache/.gitkeep
+backend/data/fhir_bundles/*
+!backend/data/fhir_bundles/.gitkeep
+
+# Node
+frontend-react/node_modules/
+frontend-react/package-lock.json
+
+# OS
+.DS_Store
+*.swp

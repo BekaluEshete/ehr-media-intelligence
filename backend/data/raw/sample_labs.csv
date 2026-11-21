@@ -1,0 +1,6 @@
+patient_id,first_name,last_name,dob,sex,document_type,date,content,doctor
+MRN10000,Alice,Smith,1985-03-14,F,lab_report,2024-01-15,CBC: WBC 7.2 k/uL (normal), RBC 4.5 M/uL, Hgb 13.8 g/dL. No abnormalities detected.,Dr. Jones
+mrn-10001,Bob,Johnson,03/14/1985,male,imaging_note,15/01/2024,Chest X-ray PA: Mild cardiomegaly. No acute consolidation. Pleural effusions absent.,Dr. Williams
+MRN10002,Carol,Williams,1990-11-02,,discharge_summary,2024-01-10,Patient admitted with chest pain. Ruled out NSTEMI. Discharge diagnosis: musculoskeletal chest pain. Continue aspirin 81mg daily.,
+MRN10003,David,Brown,02-Nov-1990,M,lab_report,2024-02-01,,Dr. Garcia
+MRN10000,Alice,Smith,1985-03-14,F,lab_report,2024-01-15,HbA1c: 7.8% — elevated, consistent with poorly controlled type 2 diabetes mellitus.,Dr. Jones

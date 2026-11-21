@@ -1,0 +1,12 @@
+MRN: MRN10004
+Date: 2024-03-01
+Author: Dr. Martinez
+
+CLINICAL NOTE
+
+Patient presents with a 3-day history of productive cough, fever 38.9°C, and right-sided
+pleuritic chest pain. History of asthma. No recent travel.
+
+Assessment: Community-acquired pneumonia, right lower lobe. 
+Plan: Azithromycin 500mg day 1 then 250mg days 2-5. Follow-up in 5 days or sooner if worsening.
+Encouraged smoking cessation.
