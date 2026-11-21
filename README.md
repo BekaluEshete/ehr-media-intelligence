@@ -11,13 +11,13 @@ for clinicians.
 ```
 Raw EHR (JSON / CSV / text)
         │
-        ▼  Task 1 — Ingestion & Cleaning
+        ▼   1 — Ingestion & Cleaning
 ┌──────────────────────────────┐
 │  Pydantic models + audit log │
 │  dedup · date normalize      │
 │  MRN / gender canonicalize   │
 └──────────────┬───────────────┘
-               │  Task 2 — FHIR R4 Mapping
+               │  2 — FHIR R4 Mapping
                ▼
 ┌──────────────────────────────┐
 │  FHIR Bundle (per patient)   │
@@ -25,7 +25,7 @@ Raw EHR (JSON / CSV / text)
 │  DiagnosticReport            │
 │  → SQLite store              │
 └──────┬───────────────────────┘
-       │  Task 3            │  Task 4
+       │  3            │  4
        ▼                    ▼
 ┌────────────────┐  ┌───────────────────────┐
 │  LLM Summary   │  │  Embed docs+summaries │
@@ -33,7 +33,7 @@ Raw EHR (JSON / CSV / text)
 │  <200 words    │  │  POST /search API     │
 │  SQLite cache  │  │  top-5 · filters      │
 └────────────────┘  └───────────┬───────────┘
-                                │  Task 5
+                                │   5
                                 ▼
                    ┌────────────────────────┐
                    │  Tailwind + Vanilla JS  │
@@ -50,12 +50,12 @@ Raw EHR (JSON / CSV / text)
 ### Prerequisites
 
 - Python 3.11+ (tested on 3.14)
-- An Anthropic or OpenAI API key (optional — the platform runs in stub mode without one)
+- An Anthropic or OpenAI API key ( use Gemini api key)
 
 ### 1. Clone and set up
 
 ```bash
-git clone <your-repo-url>
+git clone <repo-url>
 cd ehr-media-intelligence
 
 # Create virtual environment
@@ -131,7 +131,7 @@ pytest --cov=app --cov-report=term-missing   # with coverage
 **Backend** — Python 3.11+, FastAPI, Pydantic v2, fhir.resources 8.x,
 FAISS (faiss-cpu), aiosqlite, Anthropic/OpenAI SDK, pandas, python-dateutil, pytest
 
-**Frontend** — Vanilla JS, Tailwind CSS (CDN), Fetch API
+**Frontend** — React js, Tailwind CSS (CDN), Fetch API
 
 **No torch / sentence-transformers** — uses a deterministic SHA-256 stub in absence
 of an API key; upgrades to OpenAI `text-embedding-3-small` automatically when
