@@ -29,14 +29,14 @@ Raw EHR (JSON / CSV / text)
        ▼                    ▼
 ┌────────────────┐  ┌───────────────────────┐
 │  LLM Summary   │  │  Embed docs+summaries │
-│  Claude/OpenAI │  │  FAISS vector store   │
+│  Claude/gemini │  │  FAISS vector store   │
 │  <200 words    │  │  POST /search API     │
 │  SQLite cache  │  │  top-5 · filters      │
 └────────────────┘  └───────────┬───────────┘
                                 │   5
                                 ▼
                    ┌────────────────────────┐
-                   │  Tailwind + Vanilla JS  │
+                   │  Tailwind + React JS  │
                    │  Search · Cards        │
                    │  Detail drawer         │
                    │  ARIA + keyboard nav   │
