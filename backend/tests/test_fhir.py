@@ -1,8 +1,6 @@
 """Tests for FHIR R4 mapping and validation."""
 from __future__ import annotations
 
-import json
-import pytest
 from datetime import date
 
 from app.ingestion.models import (

@@ -21,7 +21,8 @@ class Settings(BaseSettings):
     openai_api_key: str = ""
     gemini_api_key: str = ""
     # Provider: "anthropic" | "openai" | "gemini" | "stub"
-    # Auto-falls back to "stub" if the chosen provider has no key set.
+    # Default is "stub" so the app works without any API key (useful for new installs).
+    # Overridden by LLM_PROVIDER in .env — set to "gemini" if you have a Gemini key.
     llm_provider: str = "stub"
 
     # Paths (resolved relative to backend/ at runtime)
@@ -34,8 +35,9 @@ class Settings(BaseSettings):
     host: str = "0.0.0.0"
     port: int = 8000
 
-    # Embedding dimension for all-MiniLM-L6-v2 / OpenAI fallback
-    embedding_dim: int = 384
+    # Embedding dimension — 3072 for Gemini, 384 for OpenAI/stub
+    embedding_dim: int = 3072
 
 
 settings = Settings()
+   
